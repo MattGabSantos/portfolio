@@ -10,7 +10,7 @@ const SkillsSection: React.FC = () => {
 
   return (
     <div id="skills" className="skills-section py-20 bg-gray-50 mb-16"> {/* Added margin-bottom */}
-      <style jsx>{`
+      <style>{`
         .skills-section {
           background-color: #f9fafb;
           padding-top: 5rem;

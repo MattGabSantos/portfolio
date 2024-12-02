@@ -22,7 +22,7 @@ const ProjectsSection: React.FC = () => {
 
   return (
     <div id="projects" className="projects-section py-20 bg-white">
-      <style jsx>{`
+      <style>{`
         .projects-section {
           background-color: #ffffff;
         }

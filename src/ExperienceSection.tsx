@@ -3,7 +3,8 @@ import React from "react";
 const ExperienceSection: React.FC = () => {
   return (
     <div id="experience" className="experience-section py-20 bg-white">
-      <style jsx>{`
+      <style>
+        {`
         .experience-section {
           background-color: #fff;
           padding-top: 5rem;
@@ -88,11 +89,11 @@ const ExperienceSection: React.FC = () => {
           background-color: #e5e7eb;
           margin-bottom: 2rem; /* Space between line and content */
         }
-
-      `}</style>
+      `}
+      </style>
 
       <div className="container mx-auto px-6">
-      <div className="separator"></div> 
+        <div className="separator"></div> 
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Experience</h2>
         <div className="content-container">
           <div className="image-container">
