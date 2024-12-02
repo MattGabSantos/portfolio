@@ -1,16 +1,16 @@
 {
   "name": "m-portfolio",
-  "homepage": "https://MattGabSantos.github.io/M-Portfolio/",
-  "private": true,
+  "homepage": "https://mattgabsantos.github.io/M-Portfolio/",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run dev",
+    "deploy": "gh-pages -d build",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run dev",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@react-spring/web": "^9.7.5",
