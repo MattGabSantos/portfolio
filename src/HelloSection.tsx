@@ -59,7 +59,7 @@ const HelloSection: React.FC = () => {
               marginTop: "10rem",
             }}
           >
-            <h1>Developer Name</h1>
+            <h1>Matthew Santos</h1>
             <h2>Aspiring UX Designer</h2>
           </animated.div>
 
