@@ -3,14 +3,64 @@ import P1 from './assets/P1.png';
 import P2 from './assets/P2.png';
 import P3 from './assets/P3.png';
 import P4 from './assets/P4.png';
+import P5 from './assets/P5.jpg';  
+import P6 from './assets/P6.jpg';  
+
 const ProjectsSection: React.FC = () => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [selectedImage, setSelectedImage] = useState<string>("");
   const [projectLink, setProjectLink] = useState<string>("");
+  const [fullProjectDetails, setFullProjectDetails] = useState<string>("");
 
-  const openModal = (image: string, link: string) => {
+  const projectData = [
+    { 
+      image: P1, 
+      title: "Smart Classroom", 
+      details: "Created in Figma", 
+      link: "https://figma.com/project1",
+      fullDetails: "This project demonstrates a smart classroom system with IoT integration and interactive features designed to improve learning experiences."
+    },
+    { 
+      image: P2, 
+      title: "Events Hub Prototype", 
+      details: "Group Project created in Figma", 
+      link: "https://figma.com/project2",
+      fullDetails: "The Events Hub is a prototype showcasing a platform to enhance student engagement with university events through dynamic, interactive features."
+    },
+    { 
+      image: P3, 
+      title: "Interactive Map Prototype", 
+      details: "Created in Figma", 
+      link: "https://figma.com/project3",
+      fullDetails: "An interactive map prototype designed for navigation, real-time updates, and user-friendly interfaces for city-wide accessibility."
+    },
+    { 
+      image: P4, 
+      title: "DRAFT XR VR", 
+      details: "Created in Figma", 
+      link: "https://figma.com/project4",
+      fullDetails: "A cutting-edge virtual reality (VR) project focusing on immersive drafting tools for architectural and engineering professionals."
+    },
+    { 
+      image: P5, 
+      title: "Project 5", 
+      details: "Details about Project 5", 
+      link: "https://figma.com/project5",
+      fullDetails: "WIP."
+    },
+    { 
+      image: P6, 
+      title: "Project 6", 
+      details: "Details about Project 6", 
+      link: "https://figma.com/project6",
+      fullDetails: "WIP."
+    },
+  ];
+
+  const openModal = (image: string, link: string, fullDetails: string) => {
     setSelectedImage(image);
     setProjectLink(link);
+    setFullProjectDetails(fullDetails);
     setModalOpen(true);
   };
 
@@ -18,6 +68,7 @@ const ProjectsSection: React.FC = () => {
     setModalOpen(false);
     setSelectedImage("");
     setProjectLink("");
+    setFullProjectDetails("");
   };
 
   return (
@@ -31,13 +82,11 @@ const ProjectsSection: React.FC = () => {
           display: flex;
           flex-direction: column;
           background-color: #f3f4f6;
-          padding: 1.5rem;
+          padding: 1rem;
           border-radius: 10px;
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
           cursor: pointer;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
-          width: 100%;
-          max-width: 350px;
         }
 
         .project-card:hover {
@@ -47,14 +96,14 @@ const ProjectsSection: React.FC = () => {
 
         .project-card img {
           width: 100%;
-          height: 400px; /* Adjusted height */
+          height: 200px;
           object-fit: cover;
           border-radius: 10px;
           transition: transform 0.3s ease;
         }
 
         .project-card img:hover {
-          transform: scale(1.1); /* Zoom effect on hover */
+          transform: scale(1.1);
         }
 
         .project-card h3 {
@@ -88,16 +137,22 @@ const ProjectsSection: React.FC = () => {
           background-color: white;
           padding: 2rem;
           border-radius: 10px;
-          width: 80%;
+          width: 90%;
           max-width: 600px;
           text-align: center;
         }
 
         .modal img {
           width: 100%;
-          max-height: 400px;
+          max-height: 300px;
           object-fit: contain;
           border-radius: 10px;
+        }
+
+        .modal p {
+          margin-top: 1rem;
+          color: #4b5563;
+          font-size: 1rem;
         }
 
         .modal button {
@@ -117,18 +172,9 @@ const ProjectsSection: React.FC = () => {
 
         .grid-container {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: 1fr;
           gap: 1rem;
           margin-top: 2rem;
-          justify-items: center;
-        }
-
-        .separator {
-          width: 100%;
-          height: 1px;
-          background-color: #e5e7eb;
-          margin-top: 5rem;
-          margin-bottom: 2rem; /* Space between line and content */
         }
 
         @media (min-width: 640px) {
@@ -139,86 +185,34 @@ const ProjectsSection: React.FC = () => {
 
         @media (min-width: 1024px) {
           .grid-container {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
           }
         }
       `}</style>
 
       <div className="container mx-auto px-6">
-      <div className="separator"></div> {/* Separator line below heading */}
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">Projects</h2>
- 
 
         <div className="grid-container">
-          <button
-            className="project-card"
-            onClick={() =>
-              openModal("https://via.placeholder.com/600", "https://www.figma.com/proto/Cndu666ZfEMaE0sW552KF1/Smart-Classroom---Group-7?node-id=4-29&starting-point-node-id=4%3A29")
-            }
-          >
-            <img
-              src={P1}
-              alt="Project 1"
-              className="rounded-lg"
-            />
-            <h3>Smart Classroom</h3>
-            <p>Created in Figma</p>
-          </button>
-
-          <button
-            className="project-card"
-            onClick={() =>
-              openModal("https://via.placeholder.com/600", "https://www.figma.com/proto/i3CZ6xjGipmuzWNAaWmsl5/Untitled?node-id=0-1")
-            }
-          >
-            <img
-              src={P2}
-              alt="Project 2"
-              className="rounded-lg"
-            />
-            <h3>Events Hub Prototype</h3>
-            <p>Group Project created in Figma</p>
-          </button>
-
-          <button
-            className="project-card"
-            onClick={() =>
-              openModal("https://via.placeholder.com/600", "https://www.figma.com/proto/JNhS0PG2CkjNMfzaSzAg3z/Santos---Enabling-Assessment-6?node-id=45-55&starting-point-node-id=45%3A55")
-            }
-          >
-            <img
-              src={P3}
-              alt="Project 3"
-              className="rounded-lg"
-            />
-            <h3>Interactive Map Prototype</h3>
-            <p>Created in Figma</p>
-          </button>
-
-          <button
-            className="project-card"
-            onClick={() =>
-              openModal("https://via.placeholder.com/600", "https://www.figma.com/proto/sJ8ckibSb5xZKDIohL9CLF/Santos---DRAFTXR?node-id=13-248&starting-point-node-id=13%3A248")
-            }
-          >
-            <img
-              src={P4}
-              alt="Project 4"
-              className="rounded-lg"
-            />
-            <h3>DRAFT XR VR</h3>
-            <p>Created in Figma</p>
-          </button>
+          {projectData.map((project, index) => (
+            <button
+              key={index}
+              className="project-card"
+              onClick={() => openModal(project.image, project.link, project.fullDetails)}
+            >
+              <img src={project.image} alt={project.title} />
+              <h3>{project.title}</h3>
+              <p>{project.details}</p>
+            </button>
+          ))}
         </div>
       </div>
 
       {modalOpen && (
         <div className="modal" onClick={closeModal}>
-          <div
-            className="modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <img src={selectedImage} alt="Zoomed In" />
+            <p>{fullProjectDetails}</p>
             <div>
               <a href={projectLink} target="_blank" rel="noopener noreferrer">
                 <button>Check Project</button>

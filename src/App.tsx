@@ -7,8 +7,8 @@ import ProjectsSection from './ProjectsSection';
 
 const App: React.FC = () => {
   return (
-    <div className="scroll-smooth font-sans">
-<NavbarComponent />
+    <div className="scroll-smooth font-sans max-w-screen-lg mx-auto sm:px-6 lg:px-8">
+      <NavbarComponent />
       <HelloSection />
       <ExperienceSection />
       <SkillsSection />

@@ -33,7 +33,6 @@ const HelloSection: React.FC = () => {
         backgroundImage: "url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGRibWNieTN4bzhrZTd1Ym9lMDB3eThyeGd3Zmt6aGg4ajdvbjdlYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JrZHAQT0CxmkPWj9LZ/giphy.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        marginTop: "2rem",
       }}
     >
       <div
@@ -59,7 +58,7 @@ const HelloSection: React.FC = () => {
               marginTop: "10rem",
             }}
           >
-            <h1>Matthew Santos</h1>
+            <h1>AAA</h1>
             <h2>Aspiring UX Designer</h2>
           </animated.div>
 
@@ -68,13 +67,13 @@ const HelloSection: React.FC = () => {
             style={{
               ...iconAnimation,
               display: "flex",
-              justifyContent: "flex-start",  // Align icons to the left
+              justifyContent: "flex-start",  
               gap: "1.5rem",
               marginTop: "1rem",  
             }}
           >
             <a
-              href="https://github.com"
+              href="https://github.com/MattGabSantos"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -88,7 +87,7 @@ const HelloSection: React.FC = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/matthew-santos-5a836733b/"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -102,7 +101,7 @@ const HelloSection: React.FC = () => {
               <FaLinkedin />
             </a>
             <a
-              href="https://facebook.com"
+              href="https://facebook.com/mattgabsantos"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -116,7 +115,7 @@ const HelloSection: React.FC = () => {
               <FaFacebook />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://twitter.com/mattgabsantos"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -146,8 +145,8 @@ const HelloSection: React.FC = () => {
             src={Matt}
             alt="Profile"
             style={{
-              width: "450px",
-              height: "450px",
+              width: "300px",
+              height: "300px",
               boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
               border: "4px solid #ccc",
               cursor: "pointer",

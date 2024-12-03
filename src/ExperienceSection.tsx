@@ -18,7 +18,7 @@ const ExperienceSection: React.FC = () => {
         .image {
           border-radius: 10px;
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-          width: 100%;
+          width: 65%;
           height: auto;
         }
 
@@ -56,10 +56,10 @@ const ExperienceSection: React.FC = () => {
         }
 
         .experience-card-image img {
-          border-radius: 50%;
+          border-radius: 30%;
           object-fit: cover;
-          width: 50px; /* Smaller image for experience cards */
-          height: 50px;
+          width: 60px; 
+          height: 60px;
         }
 
         .experience-card-text {
@@ -94,7 +94,7 @@ const ExperienceSection: React.FC = () => {
 
       <div className="container mx-auto px-6">
         <div className="separator"></div> 
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Experience</h2>
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-52">EDUCATION</h2>
         <div className="content-container">
           <div className="image-container">
             <img
@@ -103,19 +103,19 @@ const ExperienceSection: React.FC = () => {
               className="image"
             />
           </div>
-          <div className="experience-cards-container">
+          <div className="experience-cards-container mt-10">
             <div className="experience-card">
               <div className="experience-card-content">
                 <div className="experience-card-image">
                   <img
-                    src="https://via.placeholder.com/100"
+                    src="https://cdn-icons-png.flaticon.com/512/195/195812.png"
                     alt="Experience 1"
                     className="w-full h-full object-cover rounded-lg shadow"
                   />
                 </div>
                 <div className="experience-card-text">
-                  <h3 className="text-lg font-semibold text-gray-800">Experience 1</h3>
-                  <p className="text-sm text-gray-600">Details about this experience.</p>
+                  <h3 className="text-lg font-semibold text-gray-800">Divine Light Academy - Las Pinas</h3>
+                  <p className="text-sm text-gray-600">SENIOR HIGH SCHOOL</p>
                 </div>
               </div>
             </div>
@@ -124,33 +124,19 @@ const ExperienceSection: React.FC = () => {
               <div className="experience-card-content">
                 <div className="experience-card-image">
                   <img
-                    src="https://via.placeholder.com/100"
+                    src="https://cdn-icons-png.flaticon.com/512/4729/4729436.png"
                     alt="Experience 2"
                     className="w-full h-full object-cover rounded-lg shadow"
                   />
                 </div>
                 <div className="experience-card-text">
-                  <h3 className="text-lg font-semibold text-gray-800">Experience 2</h3>
-                  <p className="text-sm text-gray-600">Details about this experience.</p>
+                  <h3 className="text-lg font-semibold text-gray-800">De La Salle University - Dasmariñas</h3>
+                  <p className="text-sm text-gray-600">CURRENTLY TAKING BS IN INFORMATION TECHNOLOGY </p>
                 </div>
               </div>
             </div>
 
-            <div className="experience-card">
-              <div className="experience-card-content">
-                <div className="experience-card-image">
-                  <img
-                    src="https://via.placeholder.com/100"
-                    alt="Experience 3"
-                    className="w-full h-full object-cover rounded-lg shadow"
-                  />
-                </div>
-                <div className="experience-card-text">
-                  <h3 className="text-lg font-semibold text-gray-800">Experience 3</h3>
-                  <p className="text-sm text-gray-600">Details about this experience.</p>
-                </div>
-              </div>
-            </div>
+           
           </div>
         </div>
       </div>
