@@ -17,28 +17,28 @@ const ProjectsSection: React.FC = () => {
       image: P1, 
       title: "Smart Classroom", 
       details: "Created in Figma", 
-      link: "https://figma.com/project1",
+      link: "https://www.figma.com/proto/Cndu666ZfEMaE0sW552KF1/Smart-Classroom---Group-7?node-id=0-1",
       fullDetails: "This project demonstrates a smart classroom system with IoT integration and interactive features designed to improve learning experiences."
     },
     { 
       image: P2, 
       title: "Events Hub Prototype", 
       details: "Group Project created in Figma", 
-      link: "https://figma.com/project2",
+      link: "https://www.figma.com/proto/i3CZ6xjGipmuzWNAaWmsl5/EVENTS-HUB-PROTOTYPE?node-id=1-29&starting-point-node-id=1%3A29",
       fullDetails: "The Events Hub is a prototype showcasing a platform to enhance student engagement with university events through dynamic, interactive features."
     },
     { 
       image: P3, 
       title: "Interactive Map Prototype", 
       details: "Created in Figma", 
-      link: "https://figma.com/project3",
+      link: "https://www.figma.com/proto/JNhS0PG2CkjNMfzaSzAg3z/Santos---Enabling-Assessment-6?node-id=45-55&starting-point-node-id=45%3A55",
       fullDetails: "An interactive map prototype designed for navigation, real-time updates, and user-friendly interfaces for city-wide accessibility."
     },
     { 
       image: P4, 
       title: "DRAFT XR VR", 
       details: "Created in Figma", 
-      link: "https://figma.com/project4",
+      link: "https://www.figma.com/proto/sJ8ckibSb5xZKDIohL9CLF/Santos---DRAFTXR?node-id=13-248&starting-point-node-id=13%3A248",
       fullDetails: "A cutting-edge virtual reality (VR) project focusing on immersive drafting tools for architectural and engineering professionals."
     },
     { 
