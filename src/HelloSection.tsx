@@ -33,6 +33,9 @@ const HelloSection: React.FC = () => {
         backgroundImage: "url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGRibWNieTN4bzhrZTd1Ym9lMDB3eThyeGd3Zmt6aGg4ajdvbjdlYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JrZHAQT0CxmkPWj9LZ/giphy.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+        overflowX: "hidden", // Prevent horizontal overflow
+        margin: "0", // Remove any default margin
       }}
     >
       <div
@@ -131,6 +134,7 @@ const HelloSection: React.FC = () => {
           </animated.div>
         </div>
 
+ 
         {/* Right Side - Profile Image */}
         <animated.div
           style={{
@@ -163,6 +167,31 @@ const HelloSection: React.FC = () => {
           />
         </animated.div>
       </div>
+
+       <style>{`
+    @media (max-width: 768px) {
+      #intro {
+        height: auto;
+        min-height: 100vh;
+        background-attachment: scroll;
+        overflow-x: hidden; /* Prevent horizontal overflow on mobile */
+        margin: 0; /* Ensure no unintended margin */
+      }
+    }
+
+    /* Ensure the body and html do not allow horizontal scrolling */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 100%;
+      overflow-x: hidden; /* Prevent horizontal scrolling on the entire page */
+    }
+  `}</style>
+
+
+
     </div>
   );
 };
