@@ -16,7 +16,7 @@ const ProjectsSection: React.FC = () => {
     { 
       image: P1, 
       title: "Smart Classroom", 
-      details: "Created in Figma", 
+      details: "Group Created in Figma", 
       link: "https://www.figma.com/proto/Cndu666ZfEMaE0sW552KF1/Smart-Classroom---Group-7?node-id=0-1",
       fullDetails: "This project demonstrates a smart classroom system with IoT integration and interactive features designed to improve learning experiences."
     },
@@ -30,29 +30,29 @@ const ProjectsSection: React.FC = () => {
     { 
       image: P3, 
       title: "Interactive Map Prototype", 
-      details: "Created in Figma", 
+      details: "Solo Project Created in Figma", 
       link: "https://www.figma.com/proto/JNhS0PG2CkjNMfzaSzAg3z/Santos---Enabling-Assessment-6?node-id=45-55&starting-point-node-id=45%3A55",
       fullDetails: "An interactive map prototype designed for navigation, real-time updates, and user-friendly interfaces for city-wide accessibility."
     },
     { 
       image: P4, 
       title: "DRAFT XR VR", 
-      details: "Created in Figma", 
+      details: "Solo Project Created in Figma", 
       link: "https://www.figma.com/proto/sJ8ckibSb5xZKDIohL9CLF/Santos---DRAFTXR?node-id=13-248&starting-point-node-id=13%3A248",
       fullDetails: "A cutting-edge virtual reality (VR) project focusing on immersive drafting tools for architectural and engineering professionals."
     },
     { 
       image: P5, 
       title: "Project 5", 
-      details: "Details about Project 5", 
-      link: "https://figma.com/project5",
+      details: "SAD RAVEN", 
+      link: " ",
       fullDetails: "WIP."
     },
     { 
       image: P6, 
       title: "Project 6", 
-      details: "Details about Project 6", 
-      link: "https://figma.com/project6",
+      details: "SAD RAVEN", 
+      link: " ",
       fullDetails: "WIP."
     },
   ];

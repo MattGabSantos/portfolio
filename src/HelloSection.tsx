@@ -58,8 +58,8 @@ const HelloSection: React.FC = () => {
               marginTop: "10rem",
             }}
           >
-            <h1>AAA</h1>
-            <h2>Aspiring UX Designer</h2>
+            <h1>Matthew Santos</h1>
+            <h2>Aspiring UI/UX Designer</h2>
           </animated.div>
 
           {/* Social Icons Below Hello */}
