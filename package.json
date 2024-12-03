@@ -1,13 +1,13 @@
 {
+  "homepage": "https://mattgabsantos.github.io/portfolio/",
   "name": "m-portfolio",
-  "homepage": "https://mattgabsantos.github.io/M-Portfolio/",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "predeploy": "npm run dev",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
