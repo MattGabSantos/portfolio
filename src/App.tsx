@@ -4,15 +4,17 @@ import HelloSection from './HelloSection';
 import ExperienceSection from './ExperienceSection';
 import SkillsSection from './SkillsSection';
 import ProjectsSection from './ProjectsSection';
+import ContactSection from './ContactSection';
 
 const App: React.FC = () => {
   return (
-    <div className="scroll-smooth font-sans max-w-screen-lg mx-auto sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
       <NavbarComponent />
       <HelloSection />
+      <ProjectsSection />
       <ExperienceSection />
       <SkillsSection />
-      <ProjectsSection />
+      <ContactSection />
     </div>
   );
 };

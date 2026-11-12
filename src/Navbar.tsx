@@ -38,13 +38,13 @@ const NavbarComponent: React.FC = () => {
                 <a className="nav-link" href="#intro">Intro</a>
               </li>
               <li className="nav-item">
+                <a className="nav-link" href="#projects">Projects</a>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link" href="#experience">Education</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#skills">Skills</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#projects">Projects</a>
               </li>
             </ul>
           </div>
@@ -76,16 +76,16 @@ const NavbarComponent: React.FC = () => {
           }}
         >
           <li>
-            <a href="#intro" style={{ color: "white", padding: "15px", display: "block" }}>Intro</a>
+            <a href="#projects" onClick={() => setSideNavOpen(false)} style={{ color: "white", padding: "15px", display: "block" }}>Projects</a>
           </li>
           <li>
-            <a href="#experience" style={{ color: "white", padding: "15px", display: "block" }}>Education</a>
+            <a href="#intro" onClick={() => setSideNavOpen(false)} style={{ color: "white", padding: "15px", display: "block" }}>Intro</a>
           </li>
           <li>
-            <a href="#skills" style={{ color: "white", padding: "15px", display: "block" }}>Skills</a>
+            <a href="#experience" onClick={() => setSideNavOpen(false)} style={{ color: "white", padding: "15px", display: "block" }}>Education</a>
           </li>
           <li>
-            <a href="#projects" style={{ color: "white", padding: "15px", display: "block" }}>Projects</a>
+            <a href="#skills" onClick={() => setSideNavOpen(false)} style={{ color: "white", padding: "15px", display: "block" }}>Skills</a>
           </li>
         </ul>
       </div>
@@ -106,6 +106,7 @@ const NavbarComponent: React.FC = () => {
           }}
         />
       )}
+
     </>
   );
 };

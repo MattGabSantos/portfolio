@@ -14,18 +14,18 @@ const ProjectsSection: React.FC = () => {
 
   const projectData = [
     { 
-      image: P1, 
-      title: "Smart Classroom", 
-      details: "Group Created in Figma", 
-      link: "https://www.figma.com/proto/Cndu666ZfEMaE0sW552KF1/Smart-Classroom---Group-7?node-id=0-1",
+      image: P1,
+      title: "De La Salle Health and Sciences Institute Events Hub", 
+      details: "College Capstone Project - Made with React and Firebase", 
+      link: "https://hsieventshub.vercel.app/",
       fullDetails: "This project demonstrates a smart classroom system with IoT integration and interactive features designed to improve learning experiences."
     },
     { 
       image: P2, 
-      title: "Events Hub Prototype", 
-      details: "Group Project created in Figma", 
+      title: "Rapiid Build Alliance Website", 
+      details: "A landing page for a construction company built with React and Tailwind CSS", 
       link: "https://www.figma.com/proto/i3CZ6xjGipmuzWNAaWmsl5/EVENTS-HUB-PROTOTYPE?node-id=1-29&starting-point-node-id=1%3A29",
-      fullDetails: "The Events Hub is a prototype showcasing a platform to enhance student engagement with university events through dynamic, interactive features."
+      fullDetails: "This is a responsive landing page for a construction company, built with React and Tailwind CSS."
     },
     { 
       image: P3, 
@@ -72,10 +72,12 @@ const ProjectsSection: React.FC = () => {
   };
 
   return (
-    <div id="projects" className="projects-section py-20 bg-white">
+    <div id="projects" className="projects-section py-24 bg-white">
       <style>{`
         .projects-section {
           background-color: #ffffff;
+          padding-top: 4rem;
+          padding-bottom: 5rem;
         }
 
         .project-card {
@@ -94,6 +96,12 @@ const ProjectsSection: React.FC = () => {
           box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
         }
 
+        .project-card {
+          width: 100%;
+          border: none;
+          text-align: left;
+        }
+
         .project-card img {
           width: 100%;
           height: 200px;
@@ -102,7 +110,12 @@ const ProjectsSection: React.FC = () => {
           transition: transform 0.3s ease;
         }
 
-        .project-card img:hover {
+        .project-image-link {
+          display: block;
+          width: 100%;
+        }
+
+        .project-image-link img:hover {
           transform: scale(1.1);
         }
 
@@ -186,6 +199,24 @@ const ProjectsSection: React.FC = () => {
         @media (min-width: 1024px) {
           .grid-container {
             grid-template-columns: repeat(3, 1fr);
+          }
+        }
+
+        @media (max-width: 640px) {
+          .project-card {
+            padding: 0.75rem;
+          }
+
+          .project-card h3 {
+            font-size: 1.05rem;
+          }
+
+          .project-card p {
+            font-size: 0.875rem;
+          }
+
+          .modal-content {
+            padding: 1rem;
           }
         }
       `}</style>

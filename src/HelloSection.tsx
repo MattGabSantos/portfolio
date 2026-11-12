@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { useSpring, animated } from "@react-spring/web";
 import Matt from './assets/Matt.png'
 
@@ -26,7 +26,7 @@ const HelloSection: React.FC = () => {
     <div
       id="intro"
       style={{
-        height: "100vh",
+        minHeight: "100vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -34,45 +34,44 @@ const HelloSection: React.FC = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
-        overflowX: "hidden", // Prevent horizontal overflow
-        margin: "0", // Remove any default margin
+        overflow: "hidden",
+        padding: "6rem 1.5rem 3rem",
       }}
     >
       <div
         style={{
           display: "flex",
-          flexDirection: "row",  
+          flexDirection: "row",
           justifyContent: "space-between",
-          alignItems: "flex-start", 
+          alignItems: "center",
           width: "100%",
           maxWidth: "1200px",
-          padding: "0 2rem",
+          gap: "2rem",
+          margin: "0 auto",
         }}
       >
-        {/* Left Side - Text and Icons */}
-        <div style={{ maxWidth: "50%" }}>
+        <div style={{ maxWidth: "50%", width: "100%" }}>
           <animated.div
             style={{
               ...helloAnimation,
-              fontSize: "2.5rem",
+              fontSize: "clamp(2.2rem, 4vw, 4rem)",
               fontWeight: "800",
               color: "#ffffff",
               marginBottom: "1rem",
-              marginTop: "10rem",
+              lineHeight: "1.1",
             }}
           >
-            <h1>Matthew Santos</h1>
-            <h2>Aspiring UI/UX Designer</h2>
+            <h1 style={{ margin: 0 }}>Matthew Santos</h1>
+            <h2 style={{ margin: "0.5rem 0 0", fontSize: "clamp(1.5rem, 2.3vw, 2.5rem)" }}>Web App Developer</h2>
           </animated.div>
 
-          {/* Social Icons Below Hello */}
           <animated.div
             style={{
               ...iconAnimation,
               display: "flex",
-              justifyContent: "flex-start",  
-              gap: "1.5rem",
-              marginTop: "1rem",  
+              justifyContent: "flex-start",
+              gap: "1.25rem",
+              marginTop: "1.5rem",
             }}
           >
             <a
@@ -117,81 +116,69 @@ const HelloSection: React.FC = () => {
             >
               <FaFacebook />
             </a>
-            <a
-              href="https://twitter.com/mattgabsantos"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: "#ffffff",
-                fontSize: "2.5rem",
-                transition: "color 0.3s ease",
-              }}
-              onMouseOver={(e) => (e.currentTarget.style.color = "#1da1f2")}
-              onMouseOut={(e) => (e.currentTarget.style.color = "#ffffff")}
-            >
-              <FaTwitter />
-            </a>
+
           </animated.div>
         </div>
 
- 
-        {/* Right Side - Profile Image */}
         <animated.div
           style={{
             ...imageAnimation,
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginBottom: "1.5rem",
+            flexShrink: 0,
           }}
         >
           <img
             src={Matt}
             alt="Profile"
             style={{
-              width: "300px",
-              height: "300px",
-              boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-              border: "4px solid #ccc",
+              width: "min(28vw, 340px)",
+              height: "auto",
+              maxWidth: "300px",
+              boxShadow: "0 8px 24px rgba(15, 23, 42, 0.2)",
+              border: "4px solid rgba(255,255,255,0.8)",
+              borderRadius: "50%",
               cursor: "pointer",
               transition: "all 0.3s ease",
             }}
             onMouseOver={(e) => {
               e.currentTarget.style.transform = "scale(1.05)";
-              e.currentTarget.style.transition = "transform 0.3s ease";
             }}
             onMouseOut={(e) => {
               e.currentTarget.style.transform = "scale(1)";
-              e.currentTarget.style.transition = "transform 0.3s ease";
             }}
           />
         </animated.div>
       </div>
 
-       <style>{`
-    @media (max-width: 768px) {
-      #intro {
-        height: auto;
-        min-height: 100vh;
-        background-attachment: scroll;
-        overflow-x: hidden; /* Prevent horizontal overflow on mobile */
-        margin: 0; /* Ensure no unintended margin */
-      }
-    }
+      <style>{`
+        @media (max-width: 768px) {
+          #intro {
+            min-height: 100vh;
+            background-attachment: scroll;
+            padding-top: 7rem;
+          }
 
-    /* Ensure the body and html do not allow horizontal scrolling */
-    * {
-      margin: 0;
-      padding: 0;
-    }
-    html, body {
-      width: 100%;
-      overflow-x: hidden; /* Prevent horizontal scrolling on the entire page */
-    }
-  `}</style>
+          #intro > div {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+          }
 
+          #intro > div > div:first-child {
+            max-width: 100%;
+          }
 
+          #intro > div > div:last-child {
+            display: none;
+          }
 
+          #intro a {
+            font-size: 2rem;
+          }
+        }
+      `}</style>
     </div>
   );
 };

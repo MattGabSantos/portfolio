@@ -9,11 +9,12 @@ const SkillsSection: React.FC = () => {
   });
 
   return (
-    <div id="skills" className="skills-section py-20 mb-16"> {/* Added margin-bottom */}
+    <div id="skills" className="skills-section py-24">
       <style>{`
         .skills-section {
           background-color: #f9fafb;
           padding-top: 5rem;
+          padding-bottom: 5rem;
         }
 
         .skills-container {
@@ -55,6 +56,21 @@ const SkillsSection: React.FC = () => {
           font-size: 0.875rem;
           font-weight: 500;
           text-align: center;
+        }
+
+        @media (max-width: 768px) {
+          .skills-container {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            padding: 0 0.5rem;
+          }
+
+          .skill-card {
+            max-width: none;
+            width: 100%;
+            margin: 0;
+            padding: 1rem 0.75rem;
+          }
         }
 
         .separator {
